@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "acheremisov-terraform-state-prod"
+    bucket = "aws-terraform-state-prod"
     key    = "terraform.tfstate"
-    region = "ca-central-1"
+    region = "us-east-1"
     }
 
   required_providers {
@@ -14,7 +14,7 @@ terraform {
 }
 
 provider "aws" {
- region = "ca-central-1"
+ region = "us-east-1"
 }
 
 resource "aws_vpc" "main" {
